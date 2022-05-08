@@ -27,17 +27,25 @@ app.use("/users", userRouter);
 
 const port = process.env.PORT || 8080;
 
-db.sequelize
-  .sync()
-  .then(() => {
-    app.listen(port, () => {
-      console.log("----------------------------------");
-      console.log("|                                |");
-      console.log("|  Server running on port 3000!  |");
-      console.log("|                                |");
-      console.log("----------------------------------");
-    });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// db.sequelize
+//   .sync()
+//   .then(() => {
+//     app.listen(port, () => {
+//       console.log("----------------------------------");
+//       console.log("|                                |");
+//       console.log("|  Server running on port 3000!  |");
+//       console.log("|                                |");
+//       console.log("----------------------------------");
+//     });
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+app.listen(port, () => {
+  console.log("----------------------------------");
+  console.log("|                                |");
+  console.log("|  Server running on port 3000!  |");
+  console.log("|                                |");
+  console.log("----------------------------------");
+});
