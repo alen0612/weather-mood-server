@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     res.json(listOfPosts);
   } catch (err) {
     console.log(err);
-    res.status(500).send({ message: "Something Went Wrong!" });
+    res.status(500).send({ message: "Posts db Went Wrong!" });
   }
 });
 

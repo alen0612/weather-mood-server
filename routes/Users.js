@@ -6,8 +6,13 @@ const { sign } = require("jsonwebtoken");
 const { validateToken } = require("../middlewares/AuthMiddleware");
 
 router.get("/", async (req, res) => {
-  const listOfUsers = await Users.findAll();
-  res.json(listOfUsers);
+  try {
+    const listOfUsers = await Users.findAll();
+    res.json(listOfUsers);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ message: "Users db Went Wrong!" });
+  }
 });
 
 router.post("/signup", async (req, res) => {
