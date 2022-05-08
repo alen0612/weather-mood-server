@@ -25,7 +25,7 @@ app.use("/posts", postRouter);
 const userRouter = require("./routes/Users");
 app.use("/users", userRouter);
 
-const port = process.env.port || 3000 || 8080 || 3306;
+const port = process.env.port || process.env.PORT || 3000 || 8080 || 3306;
 
 db.sequelize
   .sync()
