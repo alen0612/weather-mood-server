@@ -16,7 +16,7 @@
   "production": {
     "username": "weathermooddb",
     "password": "12345678",
-    "database": "aa1s4ymr02gmwfz",
+    "database": "ebdb",
     "host": "aa1s4ymr02gmwfz.cxp3vbgimb9x.us-west-2.rds.amazonaws.com",
     "port": "3306",
     "dialect": "mysql"
