@@ -25,7 +25,7 @@ app.use("/posts", postRouter);
 const userRouter = require("./routes/Users");
 app.use("/users", userRouter);
 
-const port = process.env.port || 3000;
+const port = process.env.port || 3000 || 8080;
 
 db.sequelize
   .sync()
@@ -33,7 +33,7 @@ db.sequelize
     app.listen(port, () => {
       console.log("----------------------------------");
       console.log("|                                |");
-      console.log("|  Server running on port 3001!  |");
+      console.log("|  Server running on port 3000!  |");
       console.log("|                                |");
       console.log("----------------------------------");
     });
