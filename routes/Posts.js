@@ -13,6 +13,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/postTest", async (req, res) => {
+  try {
+    res.send("Test post api.");
+  } catch (err) {
+    console.log(err);
+    res.send({ message: "Posts test failed!" });
+  }
+});
+
 router.post("/", validateToken, async (req, res) => {
   const post = req.body;
   console.log(req.body);

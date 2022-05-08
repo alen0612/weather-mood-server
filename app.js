@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.send("Server runs well!");
 });
 
+app.get("/appTest", (req, res) => {
+  res.send("Test app api.");
+});
+
 const db = require("./models");
 
 app.use(function (req, res, next) {
